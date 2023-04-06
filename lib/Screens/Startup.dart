@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sequencerocher/Screens/Ready.dart';
 
 class Startup extends StatefulWidget {
   const Startup({super.key});
@@ -12,7 +13,14 @@ class _StartupState extends State<Startup> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const AskReady(),
+            ),
+          );
+        },
         child: Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 30,
